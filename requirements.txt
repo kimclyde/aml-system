@@ -1,0 +1,9 @@
+pyspark
+pandas
+scikit-learn
+matplotlib
+seaborn
+psycopg2-binary
+jupyterlab
+fastapi
+uvicorn

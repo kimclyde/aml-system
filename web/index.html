@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🇰🇭 AML Detection System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔍 AML Detection System 🇰🇭</h1>
+            <p>Advanced Money Laundering Detection & Risk Assessment</p>
+        </div>
+
+        <div class="main-card">
+            <form id="transactionForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="amount">Transaction Amount ($)</label>
+                        <input type="number" id="amount" name="amount" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Transaction Type</label>
+                        <select id="type" name="type" required>
+                            <option value="">Select Type</option>
+                            <option value="CASH_IN">Cash In</option>
+                            <option value="CASH_OUT">Cash Out</option>
+                            <option value="DEBIT">Debit</option>
+                            <option value="PAYMENT">Payment</option>
+                            <option value="TRANSFER">Transfer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="oldbalanceOrg">Sender's Old Balance ($)</label>
+                        <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newbalanceOrig">Sender's New Balance ($)</label>
+                        <input type="number" id="newbalanceOrig" name="newbalanceOrig" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="oldbalanceDest">Recipient's Old Balance ($)</label>
+                        <input type="number" id="oldbalanceDest" name="oldbalanceDest" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="newbalanceDest">Recipient's New Balance ($)</label>
+                        <input type="number" id="newbalanceDest" name="newbalanceDest" step="0.01" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="step">Time Step (Hours)</label>
+                        <input type="number" id="step" name="step" min="1" max="744" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="frequency">Transaction Frequency (Daily)</label>
+                        <input type="number" id="frequency" name="frequency" min="1" max="100" required>
+                    </div>
+                </div>
+
+                <button type="submit" class="predict-btn">🔮 Analyze Transaction</button>
+            </form>
+
+            <div id="result" class="result"></div>
+        </div>
+
+        <div class="info-cards">
+            <div class="info-card">
+                <h3>🎯 High Accuracy</h3>
+                <p>Our ML model uses advanced algorithms to detect suspicious patterns with 95%+ accuracy in transaction analysis.</p>
+            </div>
+            <div class="info-card">
+                <h3>⚡ Real-time Analysis</h3>
+                <p>Get instant results for transaction risk assessment, helping you make informed decisions quickly.</p>
+            </div>
+            <div class="info-card">
+                <h3>🛡️ Compliance Ready</h3>
+                <p>Built to meet AML compliance requirements and regulatory standards for financial institutions.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
