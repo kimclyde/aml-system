@@ -22,45 +22,80 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="type">Transaction Type</label>
-                        <select id="type" name="type" required>
-                            <option value="">Select Type</option>
-                            <option value="CASH_IN">Cash In</option>
-                            <option value="CASH_OUT">Cash Out</option>
-                            <option value="DEBIT">Debit</option>
-                            <option value="PAYMENT">Payment</option>
-                            <option value="TRANSFER">Transfer</option>
+                        <label for="day_name">Day of Week</label>
+                        <select id="day_name" name="day_name" required>
+                            <option value="">Select Day</option>
+                            <option value="Monday">Monday</option>
+                            <option value="Tuesday">Tuesday</option>
+                            <option value="Wednesday">Wednesday</option>
+                            <option value="Thursday">Thursday</option>
+                            <option value="Friday">Friday</option>
+                            <option value="Saturday">Saturday</option>
+                            <option value="Sunday">Sunday</option>
                         </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="oldbalanceOrg">Sender's Old Balance ($)</label>
-                        <input type="number" id="oldbalanceOrg" name="oldbalanceOrg" step="0.01" required>
+                        <label for="hour">Hour (0-23)</label>
+                        <input type="number" id="hour" name="hour" min="0" max="23" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="newbalanceOrig">Sender's New Balance ($)</label>
-                        <input type="number" id="newbalanceOrig" name="newbalanceOrig" step="0.01" required>
+                        <label for="type">Payment Type</label>
+                        <select id="type" name="type" required>
+                            <option value="">Select Type</option>
+                            <option value="Cash Deposit">Cash Deposit</option>
+                            <option value="Cross-border">Cross-border</option>
+                            <option value="Cheque">Cheque</option>
+                            <option value="ACH">ACH</option>
+                            <option value="Credit card">Credit card</option>
+                            <option value="Debit card">Debit card</option>
+                            <option value="Cash Withdrawal">Cash Withdrawal</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="oldbalanceDest">Recipient's Old Balance ($)</label>
-                        <input type="number" id="oldbalanceDest" name="oldbalanceDest" step="0.01" required>
+                        <label for="pay_curr">Payment Currency</label>
+                        <select id="pay_curr" name="pay_curr" required>
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="KHR">KHR</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="newbalanceDest">Recipient's New Balance ($)</label>
-                        <input type="number" id="newbalanceDest" name="newbalanceDest" step="0.01" required>
+                        <label for="recieved_curr">Received Currency</label>
+                        <select id="recieved_curr" name="recieved_curr" required>
+                            <option value="">Select Currency</option>
+                            <option value="USD">USD</option>
+                            <option value="EUR">EUR</option>
+                            <option value="GBP">GBP</option>
+                            <option value="KHR">KHR</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="step">Time Step (Hours)</label>
-                        <input type="number" id="step" name="step" min="1" max="744" required>
+                        <label for="send_loc">Sender Location</label>
+                        <select id="send_loc" name="send_loc" required>
+                            <option value="">Select Location</option>
+                            <option value="US">United States</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="EU">European Union</option>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <label for="frequency">Transaction Frequency (Daily)</label>
-                        <input type="number" id="frequency" name="frequency" min="1" max="100" required>
+                        <label for="recieve_loc">Receiver Location</label>
+                        <select id="recieve_loc" name="recieve_loc" required>
+                            <option value="">Select Location</option>
+                            <option value="US">United States</option>
+                            <option value="KH">Cambodia</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="EU">European Union</option>
+                        </select>
                     </div>
                 </div>
 

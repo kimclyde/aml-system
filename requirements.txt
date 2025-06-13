@@ -1,9 +1,11 @@
 pyspark
 pandas
-scikit-learn
+scikit-learn==1.2.2
 matplotlib
 seaborn
 psycopg2-binary
 jupyterlab
 fastapi
 uvicorn
+numpy==1.26.4
+joblib==1.5.1
