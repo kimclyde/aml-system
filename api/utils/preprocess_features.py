@@ -1,8 +1,5 @@
-import pandas as pd
 import numpy as np
 from sklearn.preprocessing import RobustScaler
-import joblib
-import os
 
 def preprocess_features(day_name, hour, amount, pay_curr, recieved_curr, send_loc, recieve_loc, payment_type):
     """
@@ -53,20 +50,3 @@ def preprocess_features(day_name, hour, amount, pay_curr, recieved_curr, send_lo
     features = [dayofweek, hour, amount_scaled, change_currency, change_location] + payment_features
     
     return np.array(features).reshape(1, -1)
-
-
-# Test the function
-if __name__ == "__main__":
-    # Test with some sample data
-    features = preprocess_features(
-        day_name="Monday",
-        hour=14,
-        amount=1000.50,
-        pay_curr="USD",
-        recieved_curr="EUR",
-        send_loc="USA",
-        recieve_loc="France",
-        payment_type="Credit card"
-    )
-    print(f"\nFeature array shape: {features.shape}")
-    print(f"Feature array: {features}")
