@@ -20,6 +20,12 @@ This project implements a machine learning-based system for detecting potential 
 - Python 3.8 or higher
 - pip package manager
 
+## Dataset
+
+You can download the dataset from the following link:
+
+🔗 [AML Transaction Dataset](https://www.kaggle.com/datasets/berkanoztas/synthetic-transaction-monitoring-dataset-aml?resource=download)
+
 ## Installation
 
 1. **Clone the repository**:
